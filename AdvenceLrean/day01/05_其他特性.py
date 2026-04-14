@@ -55,6 +55,20 @@ print(c3)
 
 # 开发一款游戏
 class Game(object):
+    top_score = 0
+    def __init__(self,player_name):
+        self.player_name = player_name
+    @staticmethod
+    def show_help():
+        print('-' * 40)
+        print('【start】开始游戏')
+        print('【stop】结束游戏')
+        print('-' * 40)
+    @classmethod
+    def show_top_score(cls):
+        print(f'本游戏的历史最高分：{Game.top_score}')
+    def start_game(self):
+        print(f'{self.player_name}开始游戏')
     # 开始游戏，打印游戏功能菜单
     @staticmethod
     def menu():
@@ -66,5 +80,11 @@ class Game(object):
         return class_count * student_number
 
 # 开始游戏、打印菜单
-Game.menu()
-print(Game.sum_students(2,100))
+# Game.menu()
+# print(Game.sum_students(2,100))
+Game.show_help()
+Game.show_top_score()
+
+game = Game("itheima")
+game.start_game()
+
