@@ -88,3 +88,37 @@ Game.show_top_score()
 game = Game("itheima")
 game.start_game()
 
+class Payment:
+    pay_rate = 0.05
+    acount_balance = 0
+
+    def __init__(self,balance=0):
+        if balance > 0:
+            self.balance = balance
+
+    def pay(self,amount):
+        if amount:
+            print(f"pay {amount*(1 + self.pay_rate)}")
+            self.acount_balance -= amount * (1 + self.pay_rate)
+
+    @classmethod
+    def set_pay_rate(cls,pay_rate):
+        cls.pay_rate = pay_rate
+
+    @staticmethod
+    def cheak_amount(amount):
+        if 0 < amount <= 5000:
+            return amount
+        else:
+            print("金额超出范围")
+
+    def __str__(self):
+        return f"账户余额：{self.acount_balance}"
+
+payment = Payment()
+amount = payment.cheak_amount(1000)
+payment.pay(amount)
+print(payment.pay_rate)
+Payment.set_pay_rate(0.08)
+print(Payment.pay_rate)
+payment.pay(amount)
