@@ -6,9 +6,11 @@ import random
 class Person:
     def __init__(self,name):
         self.name = name
+
 class Student(Person):
     def __init__(self, name):
         super().__init__(name)
+
     def study(self):
         print(f"{self.name} 在学习")
 s = Student("zhangsan")
@@ -20,6 +22,7 @@ class Bag:
     def __init__(self,color,size):
         self.__color=color
         self.__size=size
+
     def get_info(self):
         return f"颜色:{self.__color},尺寸:{self.__size}"
 b = Bag("red","大")
@@ -30,8 +33,10 @@ print(b.get_info())
 class Clock:
     def __init__(self, brand):
         self.brand = brand
+
     def ring(self):
         print(f"{self.brand}闹钟:叮铃铃")
+
     def __del__(self):
         print(f"{self.brand}闹钟已关闭")
 c = Clock("A")
@@ -43,6 +48,7 @@ del c
 class Animal:
     def speak(self):
         print("动物发出叫声")
+
 class Cat(Animal):
     def speak(self):
         print("喵喵喵")
@@ -56,8 +62,10 @@ c.speak()
 class Cup:
     def __init__(self):
         self.__water = 0
+
     def add_water(self, water):
         self.__water += water
+
     def get_water(self):
         return self.__water
 c = Cup()
@@ -69,10 +77,12 @@ print(c.get_water())
 class Teacher:
     def __init__(self,name):
         self.name = name
+
 class MathTeacher(Teacher):
     def __init__(self, name, grade):
         super().__init__(name)
         self.__grade = grade
+
     def get_grade(self):
         return self.__grade
 m = MathTeacher("A",60)
@@ -87,8 +97,10 @@ class Student:
         self.__name = name
         self.__age = age
         self.__score = score
+
     def get_info(self):
         print(f"{self.__name}, {self.__age}, {self.__score}")
+
     def __str__(self):
         return f"学生：{self.__name}，年龄：{self.__age}，成绩：{self.__score}"
 s = Student("A",15,22)
@@ -99,10 +111,12 @@ print(s)
 # topic-2
 class Car:
     total_cars = 0
+
     def __init__(self, brand, color):
         self.brand = brand
         self.color = color
         Car.total_cars += 1
+
     @classmethod
     def show_total(cls):
         print(cls.total_cars)
@@ -115,12 +129,15 @@ class Calculator:
     @staticmethod
     def add(a, b):
         return a + b
+
     @staticmethod
     def sub(a,b):
         return a - b
+
     @staticmethod
     def mul(a,b):
         return a * b
+
     @staticmethod
     def div(a,b):
         if b == 0:
@@ -139,14 +156,18 @@ class Person:
     def __init__(self, name, age):
         self.name = name
         self.age = age
+
     def eat(self):
         print(f"{self.name}吃东西")
+
 class Student(Person):
     def __init__(self, name, age, student_id):
         super().__init__(name, age)
         self.student_id = student_id
+
     def study(self):
         print(f"{self.name}正在学习,学号:{self.student_id}")
+
 s = Student("张三",123,333)
 s.eat()
 s.study()
@@ -156,18 +177,22 @@ s.study()
 class BankAccount:
     def __init__(self):
         self.__balance=0
+
     def deposit(self,amount):
         if amount <= 0:
             return "存款金额不能为负数"
         self.__balance += amount
         return f"cun ru {amount}"
+
     def withdraw(self,amount):
         if amount > self.__balance:
             return "余额不足"
         self.__balance -= amount
         return f"qu chu {amount}"
+
     def get_balance(self):
         return self.__balance
+
 b = BankAccount()
 print(b.deposit(3000))
 print(b.deposit(0))
@@ -182,8 +207,10 @@ class Book:
         self.title = title
         self.author = author
         self.price = price
+
     def __lt__(self, other):
         return self.price < other.price
+
     def __str__(self):
         return f"《{self.title}》- 作者：{self.author}，价格：{self.price}元"
 b = Book("A","B",11)
@@ -199,11 +226,13 @@ class Employee:
     def __init__(self, name, position):
         self.name = name
         self.position = position
+
     @staticmethod
     def is_valid_position(position):
         if position in Employee.company:
             return True
         return False
+
 e = Employee("a","开发")
 print(e.is_valid_position(e.position))
 
@@ -212,17 +241,22 @@ print(e.is_valid_position(e.position))
 class Shape:
     def get_area(self):
         pass
+
 class Rectangle(Shape):
     def __init__(self,width,height):
         self.width = width
         self.height = height
+
     def get_area(self):
         return self.width*self.height
+
 class Circle(Shape):
     def __init__(self,radius):
         self.radius = radius
+
     def get_area(self):
         return 3.14*self.radius**2
+
 c = Circle(5)
 print(c.get_area())
 r = Rectangle(5,5)
@@ -233,14 +267,17 @@ print(r.get_area())
 class Teacher:
     def __init__(self):
         self.__courses=list()
+
     def add_course(self,course):
         if course in self.__courses:
             print("课程已存在")
         self.__courses.append(course)
+
     def remove_course(self,course):
         if course not in self.__courses:
             print("课程不存在")
         self.__courses.remove(course)
+
     def show_courses(self):
         for course in self.__courses:
             print(course)
@@ -256,12 +293,15 @@ t.show_courses()
 # topic-10
 class MobilePhone:
     system = "Android"
+
     def __init__(self,brand,model):
         self.brand = brand
         self.model = model
+
     @classmethod
     def change_system(cls,system):
         MobilePhone.system = system
+
     def __str__(self):
         return f"品牌：{self.brand}，型号：{self.model}，系统：{self.system}"
 m = MobilePhone("XioaMi","A001")
@@ -275,8 +315,10 @@ class Movie:
     def __init__(self,name,duration):
         self.name=name
         self.duration=duration
+
     def __add__(self, other):
         return self.duration+other.duration
+
     def __str__(self):
         return f"电影：{self.name}，时长：{self.duration}分钟"
 m = Movie("A",120)
@@ -290,12 +332,15 @@ print(m+o)
 class Pet:
     def speak(self):
         pass
+
 class Dog(Pet):
     def speak(self):
         print("wang")
+
 class Cat(Pet):
     def speak(self):
         print("miao")
+
 def make_speak(pet):
     print(pet.speak())
 dog = Dog()
@@ -308,13 +353,16 @@ make_speak(cat)
 class Product:
     def __init__(self):
         self.__price = 10
+
     def get_price(self):
         return self.__price
+
     def set_price(self, price):
         if price <= 0:
             print("价格不能为负数或0")
             return
         self.__price = price
+
 p = Product()
 print(p.get_price())
 p.set_price(20)
@@ -327,12 +375,15 @@ class Team:
     member_count = 0
     def __init__(self):
         self.members = list()
+
     def add_member(self, member):
         self.members.append(member)
         type(self).member_count += 1
+
     def remove_member(self, member):
         self.members.remove(member)
         type(self).member_count -= 1
+
     @classmethod
     def show_total(cls):
         return Team.member_count
@@ -350,8 +401,10 @@ class Vector:
     def __init__(self, x, y):
         self.x = x
         self.y = y
+
     def __mul__(self, other):
         return Vector(self.x * other.x, self.y * other.y)
+
     def __str__(self):
         return f"向量(X:{self.x}, Y:{self.y})"
 v = Vector(2, 3)
@@ -365,20 +418,26 @@ class Animal:
     def __init__(self, name,age):
         self.name = name
         self.age = age
+
     def run(self):
         pass
+
 class Rabbit(Animal):
     def __init__(self, color, name, age):
         super().__init__(name, age)
         self.color = color
+
     def run(self):
         print(f"{self.name}（{self.color}）正在蹦蹦跳跳")
+
 class Horse(Animal):
     def __init__(self, name, age,speed):
         super().__init__(name, age)
         self.speed = speed
+
     def run(self):
         print(f"{self.name} 正在以{self.speed}km/h的速度奔跑")
+
 r = Rabbit("A",12,"red")
 r.run()
 h = Horse("B",14,123)
@@ -389,11 +448,13 @@ h.run()
 class ShoppingCart:
     def __init__(self):
         self.__items = list()
+
     def add_item(self, name, count, price):
         for item in self.__items:
             if item[0] == name:
                 item[1] += count
         self.__items.append([name, count, price])
+
     def remove_item(self, name):
         for item in self.__items:
             if item[0] == name:
@@ -401,6 +462,7 @@ class ShoppingCart:
                 return "商品已删除"
         else:
             print("商品不存在")
+
     def get_total(self):
         ans = 0
         for i in self.__items:
@@ -417,10 +479,12 @@ print(s.get_total())
 # topic-18
 class Game:
     player_count = 0
+
     def __init__(self, name):
         if self.is_valid_username(name):
             self.name = name
             Game.player_count += 1
+
     @staticmethod
     def is_valid_username(name):
         if 3 <= len(name) <= 10 and name.isalnum():
@@ -435,9 +499,11 @@ print(Game.player_count)
 class Person:
     def __init__(self, id_card):
         self.__id_card = id_card
+
     def get_id_card(self):
         temp = str(self.__id_card)
         return temp[0:6]+"********"+temp[-4:]
+
 p = Person("123456789012345678")
 print(p.get_id_card())
 
@@ -447,12 +513,15 @@ class Rectangle:
     def __init__(self,width,height):
         self.width = width
         self.height = height
+
     def __eq__(self, other):
         if not isinstance(other, Rectangle):
             return NotImplemented
         return self.get_area() == other.get_area()
+
     def get_area(self):
         return self.width * self.height
+
 r1 = Rectangle(6,5)
 r2 = Rectangle(5,5)
 print(r1 == r2)
@@ -464,23 +533,28 @@ class Base:
     def __init__(self,code,**kwargs):
         self.code = code
         print(f"Base初始化：code={code}")
+
 class A(Base):
     def __init__(self,code,name,**kwargs):
         super().__init__(code=code,name=name ,**kwargs)
         self.name = name
         print(f"A初始化：name={name}")
+
 class B(Base):
     def __init__(self,code,name,**kwargs):
         super().__init__(code=code,name=name,**kwargs)
         self.name = name
         print(f"B初始化：name={name}")
+
 class C(A,B):
     def __init__(self,code,name,num,**kwargs):
         super().__init__(code=code,name=name,**kwargs)
         self.num = num
         print(f"C初始化：num={num}")
+
     def __str__(self):
         return f"C(code:{self.code}, name:{self.name}, num:{self.num})"
+
 c = C(code=1001,name="test",num=99)
 print(c)
 
@@ -494,6 +568,7 @@ class Commodity:
         self.__cost_price = price
         self.__stock = stock
         self.__sales = 0
+
     def update_price(self, new_price):
         if new_price <= 0:
             raise ValueError("新价格必须大于0")
@@ -506,6 +581,7 @@ class Commodity:
     def stock_in(self,num):
         if num > 0:
             self.__stock += num
+
     def stock_out(self,num):
         if num <= 0:
             raise ValueError("出库数量必须为正数")
@@ -513,8 +589,10 @@ class Commodity:
             raise ValueError(f"出库数量({num})超过当前库存({self.__stock})")
         self.__stock -= num
         self.__sales += num
+
     def get_commodity_info(self):
         return f"SKU:{self.__sku},名称:{self.__name},价格:{self.__price},库存:{self.__stock},销量:{self.__sales}"
+
     def show_price_log(self,old_price,new_price):
         print(f'old_price:{self.__price},new_price:{new_price}')
 c = Commodity("AAAAAA01","A",12,100)
@@ -535,6 +613,7 @@ print(c.get_commodity_info())
 # topic-3
 class FileReader:
     li = list()
+
     def load(self, file_path):
         if not FileReader.li:
             with open(file_path, 'r', encoding="utf-8") as f:
@@ -575,12 +654,14 @@ class GuessNumberGame:
         self.__num = random.randint(1, 100)
         self.count = 0
         self.is_over = True
+
     def reset(self):
         self.__num = random.randint(1, 100)
         self.count = 0
         print("\n" + "=" * 40)
         print("游戏已重置！新的目标数字已生成（1-100之间）")
         print("=" * 40 + "\n")
+
     def start_game(self):
         print("开始游戏")
         while self.is_over:
@@ -605,12 +686,15 @@ g.start_game()
 class Vehicle:
     def horn(self):
         print("交通工具鸣笛")
+
 class Car(Vehicle):
     def horn(self):
         print("嘀嘀嘀")
+
 class Train(Vehicle):
     def horn(self):
         print("呜呜呜")
+
 class Bike(Vehicle):
     pass
 def make_horn(v):
@@ -629,20 +713,25 @@ make_horn(b)
 class Fruit:
     def introduce(self):
         print("这是一种水果")
+
 class FleshFruit(Fruit):
     def introduce(self):
         print("这是果肉果，果肉饱满")
+
 class Apple(FleshFruit):
     def introduce(self):
         print("这是苹果，酸甜可口")
+
 class Banana(FleshFruit):
     def introduce(self):
         print("这是香蕉，软糯香甜")
+
 class Cherry(Fruit):
     pass
 
 def show_fruit(fruit):
     fruit.introduce()
+
 fruit = Fruit()
 ffruit = FleshFruit()
 apple = Apple()
@@ -677,14 +766,17 @@ class ScoreManager:
             self.__score = score
         else:
             print('请输入合法范围成绩0-100')
+
     def update_score(self,score):
         x = self.__score + score
         if 0 <= x <= 100:
             self.__score = x
         else:
             print("输入的成绩之和不能小于0或大于100")
+
     def get_score(self):
         return f'分数为：{self.__score}'
+
     def __check_score(self,num):
         if not isinstance(num, int):
             print(f"错误：成绩必须是整数，你输入的是{type(num)}")
@@ -693,6 +785,7 @@ class ScoreManager:
             print("错误：成绩必须在0-100之间")
             return False
         return True
+
 if __name__ == '__main__':
     sm = ScoreManager()
     flag = False
@@ -701,6 +794,7 @@ if __name__ == '__main__':
         if sm.verify_code(code):
             flag = True
             break
+
     while flag:
         try:
             opt = int(input("\n请选择操作（1-查询 2-设置成绩 3-修改成绩 其他-退出）："))
@@ -730,15 +824,18 @@ class ShoppingCart:
         if pwd == self.__pwd:
             return True
         return False
+
     def add_goods(self,name,num):
         if name in self.__cart and self.__check_num(num):
             self.__cart[name] += num
         else:
             self.__cart[name] = num
+
     def del_goods(self, name,num):
         if name in self.__cart:
             if self.__check_num(num) and self.__cart[name] >= num:
                 self.__cart[name]-=num
+
     def settle(self):
         items = [(name,num) for name,num in self.__cart.items()]
         total_num = sum(self.__cart.values())
@@ -749,6 +846,7 @@ class ShoppingCart:
             return False
         else:
             return True
+
 if __name__ == '__main__':
     s = ShoppingCart()
     flag = False
@@ -793,6 +891,7 @@ class BookManager:
                 return False
         else:
             return False
+
     def borrow_book(self,name,num):
         if self.__check_borrow_num(name,num):
             self.__books[name] -= num
