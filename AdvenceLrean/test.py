@@ -41,14 +41,16 @@
 # xin_gai_nai = XinGaiNai('新概念', '钛金属', '89900','user')
 # xin_gai_nai.run()
 
-def func1(times, order=[]):
-    order.append(times)
-    print(f"当前列表: {order}")
-    return order
-    pass
+# def func1(times, order=[]):
+#     order.append(times)
+#     print(f"当前列表: {order}")
+#     return order
+#     pass
+#
+#
+# func1(times=1, order=[])
+# func1(2)
+# func1(3)
+# func1(4)
 
-
-func1(times=1, order=[])
-func1(2)
-func1(3)
-func1(4)
+print("hello world")
