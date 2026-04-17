@@ -86,13 +86,18 @@ f()
 def func():
     # 初始化累加初始值
     result = 0
-    def inner(num):
+    def inner(num,flag):
         nonlocal result
-        result += num
-        print("n",result)
+        if flag == 'red':
+            result += num
+            print("n",result)
+        elif flag == 'green':
+            result -= num
+            print("n",result)
     return inner
 
 f = func()
-f(1)
-f(2)
-f(3)
+f(1,'red')
+f(2,'green')
+f(3,'red')
+
