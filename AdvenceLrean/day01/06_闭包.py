@@ -100,4 +100,3 @@ f = func()
 f(1,'red')
 f(2,'green')
 f(3,'red')
-

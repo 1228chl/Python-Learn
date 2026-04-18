@@ -47,7 +47,7 @@ def get_time(fn):
 
 @get_time
 def demo():
-    for i in range(100000000):
+    for i in range(10000):
         print(i)
 
 demo()
@@ -132,3 +132,4 @@ def sum_num(*args,**kwargs):
     return re
 result = sum_num(1,2,3,4,a=1,b=2,c=3,d=4,e=5)
 print(result)
+
