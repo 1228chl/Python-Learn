@@ -3,7 +3,9 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/AdvenceLrean/day05/作业.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/AdvenceLrean/day05/单表查询.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/AdvenceLrean/day06/data/areas.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/AdvenceLrean/day06/单表查询.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/AdvenceLrean/day06/多表查询.sql" dialect="MySQL" />
     <file url="PROJECT" dialect="MySQL" />
   </component>
 </project>
