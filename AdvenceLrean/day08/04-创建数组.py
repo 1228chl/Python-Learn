@@ -1,6 +1,7 @@
 import numpy as np
+from skimage.util import dtype
 
-# todo:1-创建全0，或全1数组
+# todo:1-创建全0，或全1数组，或全指定指数组
 # 创建全0数组
 arr1 = np.zeros(shape=(2,3),dtype=int)
 print('arr--->',arr1.shape,arr1.dtype)
@@ -42,7 +43,7 @@ print('arr7--->',arr7)
 print('arr8--->',arr8)
 
 
-# todo：-3
+# todo：-3创建范围数组
 # start:起始值
 # stop：结束值
 # num：数组中的元素个数
@@ -60,3 +61,21 @@ print('arr2--->',arr2,arr2.dtype)
 arr3 = np.logspace(0,2,3,base=10,endpoint=True,dtype=int)
 # 10^0 10^1 10^2
 print('arr3--->',arr3,arr3.dtype)
+
+
+# todo:4-创建随机数组
+# 随机小数
+# 在[0,1)范围内生成随机小数
+# 3，2指的是对应的维度
+arr1 = np.random.rand(3,2)
+print('arr1-->',arr1,arr1.dtype)
+
+# 生成满足正太分布的随机数组，均值为0标准为1范围内生成
+arr2 = np.random.randn(3,2)
+print('arr2-->',arr2,arr2.dtype)
+
+# 随机整数
+# 在[low,high)范围内生成的整数
+# size：数组的形状
+arr3 = np.random.randint(0,10,size=(3,2,2))
+print('arr3',arr3,arr3.dtype)
