@@ -26,6 +26,7 @@ class RedisCache(object):
         try:
             # 3.1 将value转换成json数据格式
             value_str = json.dumps(value)
+
             # 3.2 设置缓存
             self.redis_client.setex(key, expire_time, value_str)
             return True
