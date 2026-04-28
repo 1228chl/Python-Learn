@@ -54,3 +54,22 @@ print(df2['open'].isin([23.53,22.80]))
 # 基于bool值s对象进行过滤, 获取满足条件的行数据
 result9 = df2[df2['open'].isin([23.53,22.80])]
 print(result9)
+
+print('=' * 80)
+# todo:3- 统计运算
+# 数值列: 统计 列值个数, 平均值 标准差 最大值 最小值 1/4分位值 1/2分位值 3/4分位值
+print(df2.describe())
+
+# max() min() mean() sum() std() ... idxmax() idxmin()
+print(df2.max())  # 默认axis=0, 按列统计
+print(df2.max(axis=1))
+print(df2['open'].max())
+print(df2.idxmax())  # 获取最大值对应的行索引值
+print(df2.idxmax(axis=1))  # 获取最大值对应的列索引值
+print(df2['open'].argmax())  # s对象中最大值对应的下标值
+print(df2.iloc[df2['open'].argmax()])  # 根据下标值获取对应的行数据
+
+# cumsum()->累加  cummax()->从目前的数据中获取最大值 cummin()  cumprod()->累积
+print(df2['open'].cumsum())
+print(df2.cumsum())  # 按列累加
+print(df2.cumsum(axis=1))  # 按行累加
