@@ -32,22 +32,22 @@ pip install pymysql==1.1.2 -i https://pypi.tuna.tsinghua.edu.cn/simple/
 pip install sqlalchemy==2.0.0 -i https://pypi.tuna.tsinghua.edu.cn/simple/
 """
 # 读取csv文件数据
-df5 = pd.read_csv('data/csv示例文件.csv', encoding='gbk', usecols=['birthday', 'name', 'AKA'])
-print(df5)
-df5.info()
-# 创建数据库连接引擎
-from sqlalchemy import create_engine
-engine = create_engine('mysql+pymysql://root:123456@127.0.0.1:3306/my_db?charset=utf8')
-# 存储到数据库
-# name: 表名, 表不存在会自动创建
-# con: 数据库连接引擎
-# index: 是否保存行索引值, 默认True
-# if_exists: 表存在时, 默认是fail->报错, 如果是replace->覆盖, 如果是append->追加
-df5.to_sql(name='csv_table', con=engine, index=False, if_exists='replace')
+# df5 = pd.read_csv('data/csv示例文件.csv', encoding='gbk', usecols=['birthday', 'name', 'AKA'])
+# print(df5)
+# df5.info()
+# # 创建数据库连接引擎
+# from sqlalchemy import create_engine
+# engine = create_engine('mysql+pymysql://root:123456@127.0.0.1:3306/my_db?charset=utf8')
+# # 存储到数据库
+# # name: 表名, 表不存在会自动创建
+# # con: 数据库连接引擎
+# # index: 是否保存行索引值, 默认True
+# # if_exists: 表存在时, 默认是fail->报错, 如果是replace->覆盖, 如果是append->追加
+# df5.to_sql(name='csv_table', con=engine, index=False, if_exists='replace')
+#
+# # 读取数据库的表数据
+# df6 = pd.read_sql(sql='csv_table', con=engine)
+# print(df6)
 
-# 读取数据库的表数据
-df6 = pd.read_sql(sql='csv_table', con=engine)
-print(df6)
-
-df7 = pd.read_sql(sql='select * from csv_table', con=engine)
-print(df7)
+# df7 = pd.read_sql(sql='select * from csv_table', con=engine)
+# print(df7)
