@@ -39,8 +39,10 @@ def get_data_loader(batch_size):
     print(train_dataset[0])
     print(test_dataset[0])
     # todo 封装dataloader
+    train_dataloader = DataLoader(train_dataset,batch_size,shuffle=True)
+    test_dataloader = DataLoader(test_dataset,batch_size,shuffle=False)
     # 返回结果
-    return DataLoader(train_dataset,batch_size,shuffle=True),DataLoader(test_dataset,batch_size,shuffle=False)
+    return train_dataloader,test_dataloader
 
 # todo 提前准备模型
 
