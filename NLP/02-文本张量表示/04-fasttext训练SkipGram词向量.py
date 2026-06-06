@@ -1,5 +1,4 @@
 # 导包
-import torch
 import fasttext
 
 def train_model():
