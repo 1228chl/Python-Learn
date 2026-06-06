@@ -6,10 +6,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import pandas as pd
 import numpy as np
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using device: {device}")
 
 # set seed
-torch.manual_seed(0)
-np.random.seed(0)
+torch.manual_seed(1)
+np.random.seed(2)
 
 
 def create_data(csv_path='data/手机价格预测.csv', test_size=0.2, random_state=88):
@@ -66,6 +68,7 @@ class PhonePriceModelAdvanced(nn.Module):
         self.dropout4 = nn.Dropout(dropout_rate)
 
         self.out = nn.Linear(hidden_dims[3],output_dim)
+        # self.out = nn.Linear(hidden_dims[1],output_dim)
 
         self._initialize_weights()
 
@@ -130,6 +133,7 @@ def train_model(
         model.train()
         total_loss = 0.0
         for x_batch,y_batch in train_loader:
+            x_batch, y_batch = x_batch.to(device), y_batch.to(device)  # 添加这行
             optimizer.zero_grad()
             outputs = model(x_batch)
             loss = criterion(outputs,y_batch)
@@ -145,6 +149,7 @@ def train_model(
         total = 0
         with torch.no_grad():
             for x_batch,y_batch in test_loader:
+                x_batch, y_batch = x_batch.to(device), y_batch.to(device)  # 添加这行
                 outputs = model(x_batch)
                 _,preds = torch.max(outputs,dim=1)
                 correct += (preds == y_batch).sum().item()
@@ -154,8 +159,9 @@ def train_model(
 
         scheduler.step(avg_train_loss)
 
-        if epoch %10 == 0 or epoch == 1:
-            print(f'Epoch [{epoch}/{num_epochs}], Loss: {avg_train_loss:.4f}, Test Acc: {test_acc:.4f}')
+        # if epoch %10 == 0 or epoch == 1:
+        #     print(f'Epoch [{epoch}/{num_epochs}], Loss: {avg_train_loss:.4f}, Test Acc: {test_acc:.4f}')
+        print(f'Epoch [{epoch}/{num_epochs}], Loss: {avg_train_loss:.4f}, Test Acc: {test_acc:.4f}')
 
         # 早停与保存最佳模型
         if test_acc > best_test_acc:
@@ -178,17 +184,20 @@ if __name__ == '__main__':
                                     class_num,
                                     hidden_dims=[128,256,256,256],
                                     dropout_rate=0.3)
+    model = model.to(device) # 将模型导入GPU
+
+
     train_model,best_acc,losses,accs = train_model(
         model,
         train_dataset,
         test_dataset,
-        batch_size=32,
+        batch_size=64,
         lr=1e-3,
-        weight_decay=1e-3,
-        num_epochs=500,
-        patience=100
+        weight_decay=1e-4,
+        num_epochs=100,
+        patience=50
     )
-    print(f"最佳验证集准确率: {best_acc:.4f}")
+    print(f"最佳验证集准确率: {best_acc:.5f}")
     # 绘制训练曲线和混淆矩阵等
 
 

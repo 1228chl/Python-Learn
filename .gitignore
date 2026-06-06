@@ -2,3 +2,6 @@
 dist/
 GitProxyManager.spec
 .idea/
+NLP/02-文本张量表示/data/fil9
+NLP/02-文本张量表示/data/cbow.bin
+NLP/02-文本张量表示/data/skipgram.bin
