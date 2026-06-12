@@ -5,4 +5,4 @@ GitProxyManager.spec
 NLP/02-文本张量表示/data/fil9
 NLP/02-文本张量表示/data/cbow.bin
 NLP/02-文本张量表示/data/skipgram.bin
-NLP/05-Transformer和Bert应用/model
+NLP/05-Transformer和Bert应用/bert-base-chinese
