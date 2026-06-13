@@ -6,4 +6,8 @@ NLP/02-文本张量表示/data/fil9
 NLP/02-文本张量表示/data/cbow.bin
 NLP/02-文本张量表示/data/skipgram.bin
 NLP/05-Transformer和Bert应用/bert-base-chinese
-Project/SubmitAFullScoreProject/data
+Project/SubmitAFullScoreProject/data/class.txt
+Project/SubmitAFullScoreProject/data/test.txt
+Project/SubmitAFullScoreProject/data/train.txt
+Project/SubmitAFullScoreProject/data/dev.txt
+Project/SubmitAFullScoreProject/data/stopwords.txt
