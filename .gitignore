@@ -11,3 +11,5 @@ Project/SubmitAFullScoreProject/data/test.txt
 Project/SubmitAFullScoreProject/data/train.txt
 Project/SubmitAFullScoreProject/data/dev.txt
 Project/SubmitAFullScoreProject/data/stopwords.txt
+Project/SubmitAFullScoreProject/rf/processed_data
+Project/SubmitAFullScoreProject/rf/model

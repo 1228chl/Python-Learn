@@ -1,5 +1,4 @@
 # 导包
-import jieba
 from tensorflow.keras.preprocessing.text import Tokenizer
 import joblib
 
