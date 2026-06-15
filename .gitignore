@@ -13,3 +13,6 @@ Project/SubmitAFullScoreProject/data/dev.txt
 Project/SubmitAFullScoreProject/data/stopwords.txt
 Project/SubmitAFullScoreProject/rf/processed_data
 Project/SubmitAFullScoreProject/rf/model
+/DL/10_综合分类案例_模型训练和评估/model/phone_model.pth
+Project/SubmitAFullScoreProject/fasttext/processed_data
+Project/SubmitAFullScoreProject/fasttext/model
