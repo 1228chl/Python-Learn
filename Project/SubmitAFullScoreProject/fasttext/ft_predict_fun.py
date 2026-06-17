@@ -25,7 +25,6 @@ def predict_fun(data):
     # 返回
     return data
 
-
 if __name__ == '__main__':
     # 模拟准备json格式数据
     # text = '词汇阅读是关键 08年考研暑期英语复习全指南'
