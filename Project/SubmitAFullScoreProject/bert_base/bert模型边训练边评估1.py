@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 BERT 文本分类微调脚本（工业级修复版）
-功能：训练 + 验证 + 保存最佳模型 + 记录超参数
+功能：训练 + 每100批验证 + 保存最佳模型 + 记录超参数
 """
 from bert_classifier_model import MyBertClassifier
 from config import Config
@@ -11,7 +11,6 @@ import torch.nn.utils as clip_grad
 from tqdm import tqdm
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 import json
-import os
 
 # 加载配置
 config = Config()
@@ -32,6 +31,33 @@ def print_config():
     print(f"  Gradient Clipping: max_norm=1.0")
     print(f"  Model Save Path : {config.bert_classifier_model_save_path}")
     print("=" * 60 + "\n")
+
+
+def evaluate(model, dataloader, desc="验证中"):
+    """
+    在给定的数据加载器上评估模型，返回各项指标
+    """
+    model.eval()  # 切换为评估模式（关闭Dropout）
+    all_true, all_pred = [], []
+
+    with torch.no_grad():
+        for batch_texts_tensor, batch_labels_tensor in tqdm(dataloader, desc=desc):
+            batch_texts_tensor = batch_texts_tensor.to(device)
+            batch_labels_tensor = batch_labels_tensor.to(device)
+
+            logits = model(batch_texts_tensor)
+            preds = torch.argmax(logits, dim=1)
+
+            all_true.extend(batch_labels_tensor.cpu().tolist())
+            all_pred.extend(preds.cpu().tolist())
+
+    # 计算全量指标
+    acc = accuracy_score(all_true, all_pred)
+    pre = precision_score(all_true, all_pred, average='macro', zero_division=0)
+    rec = recall_score(all_true, all_pred, average='macro', zero_division=0)
+    f1 = f1_score(all_true, all_pred, average='macro', zero_division=0)
+
+    return acc, pre, rec, f1
 
 
 def model_train():
@@ -55,9 +81,12 @@ def model_train():
     # 外层循环控制轮次
     for epoch in range(1, config.epochs + 1):
         # -------------------- 训练阶段 --------------------
-        my_bert_model.train()  # 开启训练模式 (Dropout生效)
+        my_bert_model.train()  # 开启训练模式
         total_loss, batch_cnt = 0, 0
         all_pred_labels, all_true_labels = [], []
+
+        # 获取训练集总批次数
+        total_train_batches = len(train_dataloader)
 
         # 内层循环
         for index, (batch_texts_tensor, batch_labels_tensor) in enumerate(
@@ -75,81 +104,75 @@ def model_train():
             optimizer.zero_grad()
             loss.backward()
 
-            # 梯度裁剪，防止梯度爆炸
+            # 梯度裁剪
             clip_grad.clip_grad_norm_(my_bert_model.parameters(), max_norm=1.0)
 
             optimizer.step()
 
-            # 日志收集
+            # 日志收集（用于每10批打印）
             total_loss += loss.item()
             batch_cnt += 1
             all_true_labels.extend(batch_labels_tensor.cpu().tolist())
             batch_pred_labels = torch.argmax(logits, dim=1)
             all_pred_labels.extend(batch_pred_labels.cpu().tolist())
 
-            # 每10批打印滑动窗口指标
-            if index % 10 == 0 or index == len(train_dataloader):
+            # -------------------- 每10批打印滑动窗口指标 (保留原功能) --------------------
+            if index % 10 == 0 or index == total_train_batches:
                 acc = accuracy_score(all_true_labels, all_pred_labels)
                 pre = precision_score(all_true_labels, all_pred_labels, average='macro', zero_division=0)
                 rec = recall_score(all_true_labels, all_pred_labels, average='macro', zero_division=0)
                 f1 = f1_score(all_true_labels, all_pred_labels, average='macro', zero_division=0)
                 avg_loss = total_loss / batch_cnt
                 print(
-                    f"轮次:{epoch}, 批次:{index}/{len(train_dataloader)}, 损失:{avg_loss:.4f}, 准确率:{acc:.4f}, F1:{f1:.4f}")
+                    f"轮次:{epoch}, 批次:{index}/{total_train_batches}, 损失:{avg_loss:.4f}, 准确率:{acc:.4f}, F1:{f1:.4f}")
 
                 # 清空窗口统计
                 total_loss, batch_cnt = 0, 0
                 all_true_labels, all_pred_labels = [], []
 
-        # -------------------- 验证阶段 (完整评估) --------------------
-        print(f"\n===== 开始 Epoch {epoch} 验证集评估 =====")
-        my_bert_model.eval()  # 关闭Dropout
-        dev_true, dev_pred = [], []
+            # -------------------- 【核心改动】每100批进行验证集评估 --------------------
+            if index % 100 == 0 or index == total_train_batches:
+                print(f"\n===== 在批次 {index}/{total_train_batches} 触发验证集评估 =====")
 
-        with torch.no_grad():
-            for batch_texts_tensor, batch_labels_tensor in tqdm(dev_dataloader, desc="验证中"):
-                batch_texts_tensor = batch_texts_tensor.to(device)
-                batch_labels_tensor = batch_labels_tensor.to(device)
+                # 调用评估函数
+                dev_acc, dev_pre, dev_rec, dev_f1 = evaluate(
+                    my_bert_model,
+                    dev_dataloader,
+                    desc=f"Epoch {epoch} 批次{index} 验证"
+                )
+                print(f"验证集结果 -> 准确率:{dev_acc:.4f}, 精确率:{dev_pre:.4f}, 召回率:{dev_rec:.4f}, F1:{dev_f1:.4f}")
 
-                logits = my_bert_model(batch_texts_tensor)
-                preds = torch.argmax(logits, dim=1)
+                # 保存最佳模型及超参数
+                if dev_f1 > best_f1:
+                    best_f1 = dev_f1
 
-                dev_true.extend(batch_labels_tensor.cpu().tolist())
-                dev_pred.extend(preds.cpu().tolist())
+                    # 1. 保存模型权重
+                    torch.save(my_bert_model.state_dict(), config.bert_classifier_model_save_path)
 
-        # 计算全量验证集指标
-        dev_acc = accuracy_score(dev_true, dev_pred)
-        dev_pre = precision_score(dev_true, dev_pred, average='macro', zero_division=0)
-        dev_rec = recall_score(dev_true, dev_pred, average='macro', zero_division=0)
-        dev_f1 = f1_score(dev_true, dev_pred, average='macro', zero_division=0)
-        print(f"验证集结果 -> 准确率:{dev_acc:.4f}, 精确率:{dev_pre:.4f}, 召回率:{dev_rec:.4f}, F1:{dev_f1:.4f}")
+                    # 2. 打包超参数并保存为 JSON 日志文件
+                    best_config_log = {
+                        'best_f1': best_f1,
+                        'best_epoch': epoch,
+                        'best_batch': index,
+                        'lr': config.lr,
+                        'batch_size': config.batch_size,
+                        'max_len': config.max_len,
+                        'hidden_size': config.bert_config.hidden_size,
+                        'optimizer': 'AdamW',
+                        'gradient_clip_norm': 1.0,
+                        'validation_frequency': '每100批',
+                        'model_save_path': config.bert_classifier_model_save_path
+                    }
+                    json_path = config.bert_classifier_model_save_path.replace('.pt', '_best_config.json')
+                    with open(json_path, 'w', encoding='utf-8') as f:
+                        json.dump(best_config_log, f, indent=4, ensure_ascii=False)
 
-        # -------------------- 保存最佳模型及超参数 --------------------
-        if dev_f1 > best_f1:
-            best_f1 = dev_f1
+                    print(f"✅ 新最佳模型已保存，F1={best_f1:.4f}")
+                    print(f"📝 对应的超参数已保存至: {json_path}")
 
-            # 1. 保存模型权重
-            torch.save(my_bert_model.state_dict(), config.bert_classifier_model_save_path)
-
-            # 2. 打包超参数并保存为 JSON 日志文件
-            best_config_log = {
-                'best_f1': best_f1,
-                'best_epoch': epoch,
-                'lr': config.lr,
-                'batch_size': config.batch_size,
-                'max_len': config.max_len,
-                'hidden_size': config.bert_config.hidden_size,
-                'optimizer': 'AdamW',
-                'gradient_clip_norm': 1.0,
-                'model_save_path': config.bert_classifier_model_save_path
-            }
-            json_path = config.bert_classifier_model_save_path.replace('.pt', '_best_config.json')
-            with open(json_path, 'w', encoding='utf-8') as f:
-                json.dump(best_config_log, f, indent=4, ensure_ascii=False)
-
-            print(f"✅ 新最佳模型已保存，F1={best_f1:.4f}")
-            print(f"📝 对应的超参数已保存至: {json_path}")
-        print("=" * 60 + "\n")
+                # 【关键】评估完毕后，切回训练模式，继续下一批训练
+                my_bert_model.train()
+                print("=" * 60 + "\n")
 
     print(f"🎉 训练完成！最佳验证集F1为: {best_f1:.4f}")
 
