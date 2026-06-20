@@ -18,3 +18,4 @@ Project/SubmitAFullScoreProject/fasttext/processed_data
 Project/SubmitAFullScoreProject/fasttext/model
 Project/SubmitAFullScoreProject/bert_base/bert-base-chinese
 /Project/SubmitAFullScoreProject/bert_base/model/
+/Project/SubmitAFullScoreProject/bert_quantization/model/
