@@ -131,7 +131,7 @@ def model_train():
                 all_true_labels, all_pred_labels = [], []
 
             # -------------------- 【核心改动】每100批进行验证集评估 --------------------
-            if index % 100 == 0 or index == total_train_batches:
+            if index % 200 == 0 or index == total_train_batches:
                 print(f"\n===== 在批次 {index}/{total_train_batches} 触发验证集评估 =====")
 
                 # 调用评估函数

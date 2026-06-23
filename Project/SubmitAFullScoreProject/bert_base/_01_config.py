@@ -50,7 +50,7 @@ class Config:
         self.bert_classifier_model_save_path = self.root_path + r'bert_base/model/bert_classifier.pt'
 
         # 参数
-        self.epochs = 5
+        self.epochs = 1
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') # 适合window
         self.batch_size = 64
         self.lr = 5e-5
