@@ -25,13 +25,11 @@ print('agent',agent)
 # 代理Agent工作
 response = agent.invoke(
     {
-        "messages":[
-            {
-                "role":"user",
-                "content":"中国目前有多少人口，给具体时间和数量"
-            }
-        ]
+        "messages":[{
+            "role":"user",
+            "content":"中国目前有多少人口"
+        }]
     }
 )
 for msg in response['messages']:
-    print(msg.content)
+    print(msg)
