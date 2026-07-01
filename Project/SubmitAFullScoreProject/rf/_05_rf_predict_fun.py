@@ -15,7 +15,7 @@ with open(config.rf_save_model_path,'rb') as f:
 # 4.定义api接口
 def predict_fun(data):
     # 4.1 json数据中获取文本，然后直接做分词
-    words = " ".join(jieba.lcut(data['text']))
+    words = " ".join(jieba.lcut(data['test']))
 
     # 4.2 tfidf文本转数据特征
     number_words = tfidf.transform([words])
@@ -37,7 +37,7 @@ def predict_fun(data):
 if __name__ == '__main__':
     #  模拟页面传递过来json数据
     text = input('请输入一个新闻')
-    data = {"text": text}
+    data = {"test": text}
 
     # 模拟调用api
     result = predict_fun(data)

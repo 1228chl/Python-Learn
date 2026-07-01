@@ -42,7 +42,7 @@ def predict_fun(q):
         model="deepseek-v4-pro",
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": data['text']},
+            {"role": "user", "content": data['test']},
         ],
         stream=False,
         reasoning_effort="high",
@@ -62,7 +62,7 @@ def predict_fun(q):
 if __name__ == '__main__':
     # 模拟页面传递过来json数据
     text = input('请您输入一个新闻:')
-    data = {"text": text}
+    data = {"test": text}
     # TODO 模拟调用API
     result = predict_fun(data)
     print(result)

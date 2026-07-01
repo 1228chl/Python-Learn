@@ -17,12 +17,12 @@ def index():
     response_time = None
 
     if request.method == 'POST':
-        input_text = request.form.get('text', '').strip()
+        input_text = request.form.get('test', '').strip()
 
         if input_text:
             try:
                 start_time = time.time()
-                data = {"text": input_text}
+                data = {"test": input_text}
                 result = predict_fun(data)
                 end_time = time.time()
                 response_time = round((end_time - start_time) * 1000, 2)
@@ -54,8 +54,8 @@ def index():
                 --accent-purple: #b829dd;
                 --accent-green: #00ff88;
                 --accent-orange: #ff9500;
-                --text-primary: #e0e6ed;
-                --text-secondary: #8892b0;
+                --test-primary: #e0e6ed;
+                --test-secondary: #8892b0;
                 --border-color: #233554;
                 --glow-cyan: 0 0 20px rgba(0, 245, 255, 0.5);
                 --glow-purple: 0 0 20px rgba(184, 41, 221, 0.5);
@@ -67,7 +67,7 @@ def index():
                 min-height: 100vh;
                 position: relative;
                 overflow-x: hidden;
-                color: var(--text-primary);
+                color: var(--test-primary);
             }
             
             body::before {
@@ -115,7 +115,7 @@ def index():
             }
             
             .header {
-                text-align: center;
+                test-align: center;
                 margin-bottom: 50px;
                 padding: 30px;
                 background: var(--bg-secondary);
@@ -146,15 +146,15 @@ def index():
                 font-size: 36px;
                 font-weight: 600;
                 background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
+                -webkit-background-clip: test;
+                -webkit-test-fill-color: transparent;
+                background-clip: test;
                 margin-bottom: 10px;
                 letter-spacing: 2px;
             }
             
             .subtitle {
-                color: var(--text-secondary);
+                color: var(--test-secondary);
                 font-size: 14px;
                 margin-top: 10px;
             }
@@ -195,8 +195,8 @@ def index():
             
             .terminal-title {
                 flex: 1;
-                text-align: center;
-                color: var(--text-secondary);
+                test-align: center;
+                color: var(--test-secondary);
                 font-size: 12px;
             }
             
@@ -241,7 +241,7 @@ def index():
             }
             
             textarea::placeholder {
-                color: var(--text-secondary);
+                color: var(--test-secondary);
                 opacity: 0.5;
             }
             
@@ -265,7 +265,7 @@ def index():
                 position: relative;
                 overflow: hidden;
                 transition: all 0.3s;
-                text-transform: uppercase;
+                test-transform: uppercase;
                 letter-spacing: 2px;
             }
             
@@ -307,7 +307,7 @@ def index():
                 font-weight: 600;
                 cursor: pointer;
                 transition: all 0.3s;
-                text-transform: uppercase;
+                test-transform: uppercase;
                 letter-spacing: 2px;
             }
             
@@ -389,7 +389,7 @@ def index():
             }
             
             .result-value {
-                color: var(--text-primary);
+                color: var(--test-primary);
                 flex: 1;
                 word-break: break-word;
             }
@@ -398,13 +398,13 @@ def index():
                 color: var(--accent-green);
                 font-size: 24px;
                 font-weight: 600;
-                text-shadow: var(--glow-cyan);
+                test-shadow: var(--glow-cyan);
                 animation: glow 2s ease-in-out infinite alternate;
             }
             
             @keyframes glow {
-                from { text-shadow: 0 0 10px var(--accent-cyan); }
-                to { text-shadow: 0 0 20px var(--accent-cyan), 0 0 30px var(--accent-cyan); }
+                from { test-shadow: 0 0 10px var(--accent-cyan); }
+                to { test-shadow: 0 0 20px var(--accent-cyan), 0 0 30px var(--accent-cyan); }
             }
             
             .time-badge {
@@ -469,7 +469,7 @@ def index():
                 justify-content: space-between;
                 align-items: center;
                 font-size: 12px;
-                color: var(--text-secondary);
+                color: var(--test-secondary);
                 z-index: 100;
             }
             
@@ -535,8 +535,8 @@ def index():
                     <div class="input-section">
                         <div class="prompt">请输入待分类的新闻文本<span class="cursor-blink"></span></div>
                         <textarea 
-                            id="text" 
-                            name="text" 
+                            id="test" 
+                            name="test" 
                             placeholder="// 在此输入新闻内容...&#10;// 系统将自动分析并返回分类结果"
                             required>{{ input_text }}</textarea>
                     </div>
@@ -574,7 +574,7 @@ def index():
                         <div class="result-card">
                             <div class="result-row">
                                 <div class="result-label">Input_Text</div>
-                                <div class="result-value">{{ result.text[:300] }}{% if result.text|length > 300 %}...{% endif %}</div>
+                                <div class="result-value">{{ result.test[:300] }}{% if result.test|length > 300 %}...{% endif %}</div>
                             </div>
                             <div class="result-row">
                                 <div class="result-label">Prediction</div>
@@ -606,8 +606,8 @@ def index():
         
         <script>
             function clearText() {
-                document.getElementById('text').value = '';
-                document.getElementById('text').focus();
+                document.getElementById('test').value = '';
+                document.getElementById('test').focus();
             }
         </script>
     </body>

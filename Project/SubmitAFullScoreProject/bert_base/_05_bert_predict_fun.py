@@ -10,7 +10,7 @@ bert_model.load_state_dict(torch.load(config.bert_classifier_model_save_path))
 # todo 3.定义api接口
 def predict_fun(data):
     # 获取文本
-    text = data['text']
+    text = data['test']
     # tokenizer特征处理
     text_tensor = config.bert_tokenizer(text,max_length=config.max_len,padding='max_length',truncation=True,return_tensors='pt')
     # 模型预测拿到样本对应10个分数
@@ -27,9 +27,9 @@ def predict_fun(data):
 
 if __name__ == '__main__':
     # 模拟准备json格式数据
-    # text = '词汇阅读是关键 08年考研暑期英语复习全指南'
+    # test = '词汇阅读是关键 08年考研暑期英语复习全指南'
     text = input('请您输入一个新闻:')
-    data = {"text": text}
+    data = {"test": text}
     # TODO 模拟调用API
     result = predict_fun(data)
     print(result)

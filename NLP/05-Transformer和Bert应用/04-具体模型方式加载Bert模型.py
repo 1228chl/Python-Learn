@@ -10,7 +10,7 @@ texts = ['传智教育','黑马程序员','人工智能专业']
 # texts = ('传智教育','黑马程序员')
 
 # bert_tokenizer处理数据
-# data = bert_tokenizer(text='传智教育',text_pair='黑马程序员')
+# data = bert_tokenizer(test='传智教育',text_pair='黑马程序员')
 data = bert_tokenizer(
     texts,
     max_length=8,

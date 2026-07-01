@@ -18,7 +18,7 @@ def build_inverted_index(documents):
 
     for doc_id, text in documents.items():
 
-        # text = """
+        # test = """
         #     全文检索技术是信息检索领域的重要研究方向。
         #     它通过构建倒排索引，实现大规模文档的快速搜索。
         #     相比顺序扫描，全文检索的效率更高。
