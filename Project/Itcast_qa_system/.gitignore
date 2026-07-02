@@ -1,0 +1,12 @@
+.idea/
+.vscode/
+*.pyc
+*.log
+__pycache__/
+build/
+base/__pycache__
+mysql_qa/__pycache__
+rage_qa/__pycache__
+.DS_Store
+rage_qa/models/
+*.csv

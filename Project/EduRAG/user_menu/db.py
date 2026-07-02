@@ -8,6 +8,7 @@
 对于上面的chunk编码，存储到向量数据库[chroma]
 4.返回检索器
 '''
+import os
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from models import embedding
@@ -17,6 +18,10 @@ def create_db(file_path,embedding,persist_directory="./chroma.db"):
     '''
     读取file_path的pdf文件，创建向量是数据库，返回检索器
     '''
+    if os.path.exists(persist_directory):
+        vector_store = Chroma(persist_directory)
+        return vector_store.as_retriever()
+
     # 1.读取PDF文件，List[Document]
     loader = PyMuPDFLoader(file_path)
     docs = loader.load()
@@ -25,7 +30,7 @@ def create_db(file_path,embedding,persist_directory="./chroma.db"):
     # 2.文档切块
     # 创建文档分割器，执行切分chunk
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=50,
+        chunk_size=100,
         chunk_overlap=10,
     )
     chunks = text_splitter.split_documents(docs)

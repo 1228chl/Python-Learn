@@ -24,3 +24,4 @@ Project/SubmitAFullScoreProject/bert_base/bert-base-chinese
 /Project/NLP-DangDangBookClassifier/data/
 /RAG/Langchain/_06indexes/outputs/
 /.venv_edu_rag/
+/Project/EduRAG/user_menu/chroma.db/
