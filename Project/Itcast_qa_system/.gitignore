@@ -11,3 +11,10 @@ rage_qa/__pycache__
 rage_qa/models/
 *.csv
 /docker/milvus_redis/volumes/
+*.safetensors
+*.pt
+*.bin
+*.model
+/rag_qa/models/bge-m3/tokenizer.json
+/rag_qa/models/bge-m3/onnx/tokenizer.json
+/rag_qa/models/bge-reranker-v2-m3/tokenizer.json

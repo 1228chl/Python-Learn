@@ -1,0 +1,412 @@
+{"query":"什么是Python中的装饰器？","label":"通用知识"}
+{"query":"如何用Java实现快速排序？","label":"通用知识"}
+{"query":"什么是操作系统中的进程和线程？","label":"通用知识"}
+{"query":"解释一下HTTP和HTTPS的区别","label":"通用知识"}
+{"query":"如何修复Python中的缩进错误？","label":"通用知识"}
+{"query":"什么是机器学习中的过拟合？","label":"通用知识"}
+{"query":"C++中指针的作用是什么？","label":"通用知识"}
+{"query":"写一个Python函数实现斐波那契数列","label":"通用知识"}
+{"query":"什么是数据库的索引？","label":"通用知识"}
+{"query":"解释一下TCP三次握手过程","label":"通用知识"}
+{"query":"如何用SQL查询重复数据？","label":"通用知识"}
+{"query":"什么是深度学习？","label":"通用知识"}
+{"query":"Java中HashMap的实现原理","label":"通用知识"}
+{"query":"Python如何读取CSV文件？","label":"通用知识"}
+{"query":"什么是Linux中的权限管理？","label":"通用知识"}
+{"query":"解释一下RESTful API设计原则","label":"通用知识"}
+{"query":"如何用JavaScript实现防抖函数？","label":"通用知识"}
+{"query":"什么是正则表达式？","label":"通用知识"}
+{"query":"如何解决内存泄漏问题？","label":"通用知识"}
+{"query":"什么是Git的rebase操作？","label":"通用知识"}
+{"query":"解释一下虚拟内存的概念","label":"通用知识"}
+{"query":"Python中的生成器是什么？","label":"通用知识"}
+{"query":"什么是Docker容器？","label":"通用知识"}
+{"query":"如何实现一个简单的HTTP服务器？","label":"通用知识"}
+{"query":"什么是微服务架构？","label":"通用知识"}
+{"query":"解释一下JSON和XML的区别","label":"通用知识"}
+{"query":"什么是编译型语言和解释型语言？","label":"通用知识"}
+{"query":"如何用Python发送HTTP请求？","label":"通用知识"}
+{"query":"什么是缓存穿透？","label":"通用知识"}
+{"query":"解释一下KMP算法","label":"通用知识"}
+{"query":"什么是区块链？","label":"通用知识"}
+{"query":"如何实现单例模式？","label":"通用知识"}
+{"query":"什么是负载均衡？","label":"通用知识"}
+{"query":"Python中list和tuple的区别","label":"通用知识"}
+{"query":"什么是人工智能？","label":"通用知识"}
+{"query":"如何优化SQL查询性能？","label":"通用知识"}
+{"query":"什么是递归？","label":"通用知识"}
+{"query":"解释一下二叉树遍历方式","label":"通用知识"}
+{"query":"什么是消息队列？","label":"通用知识"}
+{"query":"如何使用Git提交代码？","label":"通用知识"}
+{"query":"什么是哈希函数？","label":"通用知识"}
+{"query":"解释一下操作系统调度算法","label":"通用知识"}
+{"query":"Python中异常处理怎么写？","label":"通用知识"}
+{"query":"什么是CDN？","label":"通用知识"}
+{"query":"解释一下HTTPS加密过程","label":"通用知识"}
+{"query":"什么是NoSQL数据库？","label":"通用知识"}
+{"query":"如何实现LRU缓存？","label":"通用知识"}
+{"query":"什么是线程安全？","label":"通用知识"}
+{"query":"解释一下B树和B+树","label":"通用知识"}
+{"query":"什么是云计算？","label":"通用知识"}
+{"query":"什么是函数式编程？","label":"通用知识"}
+{"query":"解释一下死锁产生的条件","label":"通用知识"}
+{"query":"如何用Python解析JSON数据？","label":"通用知识"}
+{"query":"什么是RPC调用？","label":"通用知识"}
+{"query":"解释一下浏览器缓存机制","label":"通用知识"}
+{"query":"什么是分布式系统？","label":"通用知识"}
+{"query":"如何设计一个高并发系统？","label":"通用知识"}
+{"query":"什么是幂等性？","label":"通用知识"}
+{"query":"解释一下JWT认证机制","label":"通用知识"}
+{"query":"什么是WebSocket？","label":"通用知识"}
+{"query":"如何实现数据库分库分表？","label":"通用知识"}
+{"query":"什么是ElasticSearch？","label":"通用知识"}
+{"query":"解释一下一致性哈希","label":"通用知识"}
+{"query":"什么是事务的ACID特性？","label":"通用知识"}
+{"query":"如何实现接口限流？","label":"通用知识"}
+{"query":"什么是GraphQL？","label":"通用知识"}
+{"query":"解释一下服务熔断机制","label":"通用知识"}
+{"query":"什么是容器编排？","label":"通用知识"}
+{"query":"如何用Python操作Redis？","label":"通用知识"}
+{"query":"什么是消息中间件？","label":"通用知识"}
+{"query":"解释一下CAP理论","label":"通用知识"}
+{"query":"什么是数据结构中的栈和队列？","label":"通用知识"}
+{"query":"如何实现二分查找？","label":"通用知识"}
+{"query":"什么是时间复杂度？","label":"通用知识"}
+{"query":"解释一下动态规划思想","label":"通用知识"}
+{"query":"什么是垃圾回收机制？","label":"通用知识"}
+{"query":"如何用Java实现多线程？","label":"通用知识"}
+{"query":"什么是设计模式？","label":"通用知识"}
+{"query":"解释一下观察者模式","label":"通用知识"}
+{"query":"什么是反射机制？","label":"通用知识"}
+{"query":"如何实现接口幂等？","label":"通用知识"}
+{"query":"什么是跨域问题？","label":"通用知识"}
+{"query":"解释一下浏览器同源策略","label":"通用知识"}
+{"query":"什么是负载均衡算法？","label":"通用知识"}
+{"query":"如何实现分布式锁？","label":"通用知识"}
+{"query":"什么是数据仓库？","label":"通用知识"}
+{"query":"解释一下ETL流程","label":"通用知识"}
+{"query":"什么是AI大模型？","label":"通用知识"}
+{"query":"如何训练一个分类模型？","label":"通用知识"}
+{"query":"什么是向量数据库？","label":"通用知识"}
+{"query":"解释一下RAG技术","label":"通用知识"}
+{"query":"什么是Prompt工程？","label":"通用知识"}
+{"query":"如何优化大模型推理性能？","label":"通用知识"}
+{"query":"AI大模型课程学费是多少？","label":"专业咨询"}
+{"query":"Java培训班一般学习多久？","label":"专业咨询"}
+{"query":"Python课程有没有零基础班？","label":"专业咨询"}
+{"query":"人工智能课程的就业方向有哪些？","label":"专业咨询"}
+{"query":"测试工程师培训课程内容有哪些？","label":"专业咨询"}
+{"query":"大数据课程适合哪些人学习？","label":"专业咨询"}
+{"query":"你们的AI课程有项目实战吗？","label":"专业咨询"}
+{"query":"Java培训的课程大纲是什么？","label":"专业咨询"}
+{"query":"是否提供线下面授的编程培训？","label":"专业咨询"}
+{"query":"Python培训班在哪里上课？","label":"专业咨询"}
+{"query":"AI课程的师资力量怎么样？","label":"专业咨询"}
+{"query":"软件测试课程费用是多少？","label":"专业咨询"}
+{"query":"有没有适合在职人员的编程课程？","label":"专业咨询"}
+{"query":"培训结束后是否推荐就业？","label":"专业咨询"}
+{"query":"机器学习课程多久可以学完？","label":"专业咨询"}
+{"query":"有没有提供免费试听课程？","label":"专业咨询"}
+{"query":"Java培训是否包含企业项目？","label":"专业咨询"}
+{"query":"AI课程需要什么基础？","label":"专业咨询"}
+{"query":"前端开发课程学哪些内容？","label":"专业咨询"}
+{"query":"培训班是否提供住宿？","label":"专业咨询"}
+{"query":"课程是否支持分期付款？","label":"专业咨询"}
+{"query":"大模型课程有没有实战案例？","label":"专业咨询"}
+{"query":"培训机构的讲师是什么背景？","label":"专业咨询"}
+{"query":"Python课程适合转行吗？","label":"专业咨询"}
+{"query":"是否有针对大学生的编程培训？","label":"专业咨询"}
+{"query":"AI培训课程在哪个城市有？","label":"专业咨询"}
+{"query":"课程结束后是否有证书？","label":"专业咨询"}
+{"query":"Java课程每天上课时间多久？","label":"专业咨询"}
+{"query":"是否支持线上学习AI课程？","label":"专业咨询"}
+{"query":"课程有没有一对一辅导？","label":"专业咨询"}
+{"query":"数据分析课程学费是多少？","label":"专业咨询"}
+{"query":"培训班是否有就业保障？","label":"专业咨询"}
+{"query":"AI课程包含哪些模型内容？","label":"专业咨询"}
+{"query":"有没有周末班的Python课程？","label":"专业咨询"}
+{"query":"课程是否包含面试辅导？","label":"专业咨询"}
+{"query":"Java培训班适合零基础吗？","label":"专业咨询"}
+{"query":"AI课程报名流程是什么？","label":"专业咨询"}
+{"query":"学习周期一般是几个月？","label":"专业咨询"}
+{"query":"是否提供企业内训服务？","label":"专业咨询"}
+{"query":"课程是否包含项目实训？","label":"专业咨询"}
+{"query":"培训班的上课地点在哪里？","label":"专业咨询"}
+{"query":"AI课程是否有作业和考核？","label":"专业咨询"}
+{"query":"软件开发课程有哪些方向？","label":"专业咨询"}
+{"query":"是否可以先试听再报名？","label":"专业咨询"}
+{"query":"课程是否更新最新技术？","label":"专业咨询"}
+{"query":"AI课程适合文科生吗？","label":"专业咨询"}
+{"query":"培训结束后就业率如何？","label":"专业咨询"}
+{"query":"有没有短期速成的编程班？","label":"专业咨询"}
+{"query":"课程是否提供学习资料？","label":"专业咨询"}
+{"query":"报名后多久可以开始上课？","label":"专业咨询"}
+{"query":"AI课程有没有线下实训基地？","label":"专业咨询"}
+{"query":"Java课程是否包含框架学习？","label":"专业咨询"}
+{"query":"Python培训班是否有作业批改？","label":"专业咨询"}
+{"query":"AI课程的学习难度大吗？","label":"专业咨询"}
+{"query":"培训班是否提供就业指导老师？","label":"专业咨询"}
+{"query":"课程费用可以退吗？","label":"专业咨询"}
+{"query":"大数据课程是否包含Hadoop和Spark？","label":"专业咨询"}
+{"query":"AI课程是否包含深度学习内容？","label":"专业咨询"}
+{"query":"前端课程是否包含React和Vue？","label":"专业咨询"}
+{"query":"培训班是否有企业合作项目？","label":"专业咨询"}
+{"query":"课程学习过程中是否有考试？","label":"专业咨询"}
+{"query":"AI课程报名有没有优惠？","label":"专业咨询"}
+{"query":"Java课程是否有实战项目？","label":"专业咨询"}
+{"query":"Python课程是否包含爬虫项目？","label":"专业咨询"}
+{"query":"课程是否支持远程教学？","label":"专业咨询"}
+{"query":"AI课程是否包含大模型训练？","label":"专业咨询"}
+{"query":"培训班是否提供学习计划？","label":"专业咨询"}
+{"query":"课程是否适合零基础转行？","label":"专业咨询"}
+{"query":"AI课程的上课方式有哪些？","label":"专业咨询"}
+{"query":"培训班是否有就业推荐企业？","label":"专业咨询"}
+{"query":"课程是否包含算法基础教学？","label":"专业咨询"}
+{"query":"AI课程是否提供项目源码？","label":"专业咨询"}
+{"query":"Java课程学习完可以做什么工作？","label":"专业咨询"}
+{"query":"Python课程是否有直播教学？","label":"专业咨询"}
+{"query":"课程是否有学习群交流？","label":"专业咨询"}
+{"query":"AI课程是否包含NLP内容？","label":"专业咨询"}
+{"query":"培训班是否有入学测试？","label":"专业咨询"}
+{"query":"课程是否支持重复学习？","label":"专业咨询"}
+{"query":"AI课程是否适合应届毕业生？","label":"专业咨询"}
+{"query":"培训班是否有学员评价？","label":"专业咨询"}
+{"query":"课程是否提供简历指导？","label":"专业咨询"}
+{"query":"AI课程是否包含计算机视觉？","label":"专业咨询"}
+{"query":"培训班是否有企业参观机会？","label":"专业咨询"}
+{"query":"课程是否有结课项目？","label":"专业咨询"}
+{"query":"AI课程是否包含强化学习内容？","label":"专业咨询"}
+{"query":"培训班是否支持试学几天？","label":"专业咨询"}
+{"query":"课程是否有老师答疑？","label":"专业咨询"}
+{"query":"AI课程是否有分阶段学习？","label":"专业咨询"}
+{"query":"培训班是否提供实习机会？","label":"专业咨询"}
+{"query":"课程是否有学习进度跟踪？","label":"专业咨询"}
+{"query":"AI课程是否有课程更新机制？","label":"专业咨询"}
+{"query":"培训班是否有班主任管理？","label":"专业咨询"}
+{"query":"课程是否有技术交流群？","label":"专业咨询"}
+{"query":"AI课程是否支持线下交流活动？","label":"专业咨询"}
+{"query":"培训班是否有毕业证书？","label":"专业咨询"}
+{"query":"课程是否有阶段测试？","label":"专业咨询"}
+{"query":"AI课程是否有专属学习平台？","label":"专业咨询"}
+{"query":"培训班是否有课程回放？","label":"专业咨询"}
+{"query":"课程是否支持延期学习？","label":"专业咨询"}
+{"query":"AI课程是否适合高中生？","label":"专业咨询"}
+{"query":"培训班是否有技术沙龙活动？","label":"专业咨询"}
+{"query":"课程是否有知识点总结资料？","label":"专业咨询"}
+{"query":"AI课程是否有实战比赛？","label":"专业咨询"}
+{"query":"培训班是否有课程顾问？","label":"专业咨询"}
+{"query":"课程是否有在线测试系统？","label":"专业咨询"}
+{"query":"AI课程是否包含自动驾驶内容？","label":"专业咨询"}
+{"query":"培训班是否有就业数据统计？","label":"专业咨询"}
+{"query":"课程是否有答疑直播？","label":"专业咨询"}
+{"query":"AI课程是否支持企业定制？","label":"专业咨询"}
+{"query": "Python中列表和元组的区别是什么？", "label": "通用知识"}
+{"query": "Java全栈开发培训班学费多少钱？", "label": "专业咨询"}
+{"query": "如何计算斐波那契数列的第n项？", "label": "通用知识"}
+{"query": "你们的人工智能课程有项目实战吗？", "label": "专业咨询"}
+{"query": "什么是HTTP协议？", "label": "通用知识"}
+{"query": "软件测试工程师培训周期是多久？", "label": "专业咨询"}
+{"query": "请用C++实现快速排序算法", "label": "通用知识"}
+{"query": "大数据培训课程包含哪些技术栈？", "label": "专业咨询"}
+{"query": "解释一下面向对象编程的三大特性", "label": "通用知识"}
+{"query": "前端开发就业班在北京有校区吗？", "label": "专业咨询"}
+{"query": "SQL中INNER JOIN和LEFT JOIN的区别", "label": "通用知识"}
+{"query": "云计算运维培训的师资背景如何？", "label": "专业咨询"}
+{"query": "什么是递归函数？请举例说明", "label": "通用知识"}
+{"query": "UI设计培训课程适合零基础学员吗？", "label": "专业咨询"}
+{"query": "Linux系统中chmod命令怎么用？", "label": "通用知识"}
+{"query": "网络安全培训班毕业后推荐工作吗？", "label": "专业咨询"}
+{"query": "JavaScript中var、let和const的区别", "label": "通用知识"}
+{"query": "嵌入式开发培训需要自备电脑吗？", "label": "专业咨询"}
+{"query": "什么是数据库索引？有什么作用？", "label": "通用知识"}
+{"query": "Go语言后端开发课程大纲能发一下吗？", "label": "专业咨询"}
+{"query": "Git中rebase和merge有什么区别？", "label": "通用知识"}
+{"query": "数据分析培训班周末可以上课吗？", "label": "专业咨询"}
+{"query": "TCP三次握手的过程是怎样的？", "label": "通用知识"}
+{"query": "产品经理培训课程费用大概多少？", "label": "专业咨询"}
+{"query": "Python装饰器是什么？如何使用？", "label": "通用知识"}
+{"query": "鸿蒙应用开发培训有认证证书吗？", "label": "专业咨询"}
+{"query": "什么是RESTful API设计规范？", "label": "通用知识"}
+{"query": "自动化测试培训班在深圳有开课吗？", "label": "专业咨询"}
+{"query": "二叉树的前序遍历怎么实现？", "label": "通用知识"}
+{"query": "区块链技术培训适合转行人员吗？", "label": "专业咨询"}
+{"query": "Docker容器和虚拟机有什么区别？", "label": "通用知识"}
+{"query": "全栈Web开发培训包住宿吗？", "label": "专业咨询"}
+{"query": "什么是消息队列？有哪些常见产品？", "label": "通用知识"}
+{"query": "AI大模型微调课程学完能做什么项目？", "label": "专业咨询"}
+{"query": "CSS Flex布局的核心属性有哪些？", "label": "通用知识"}
+{"query": "Java架构师培训班入学需要什么基础？", "label": "专业咨询"}
+{"query": "什么是哈希冲突？如何解决？", "label": "通用知识"}
+{"query": "游戏开发培训课程使用什么引擎？", "label": "专业咨询"}
+{"query": "Redis缓存穿透和缓存雪崩的区别", "label": "通用知识"}
+{"query": "移动端开发培训成都校区地址在哪？", "label": "专业咨询"}
+{"query": "Python中生成器和迭代器的区别", "label": "通用知识"}
+{"query": "DevOps工程师培训有企业内推机会吗？", "label": "专业咨询"}
+{"query": "什么是微服务架构？有哪些优缺点？", "label": "通用知识"}
+{"query": "软件测试培训班线上和线下哪个效果好？", "label": "专业咨询"}
+{"query": "Kubernetes中Pod和Node的关系是什么？", "label": "通用知识"}
+{"query": "大数据ETL开发培训学费能分期吗？", "label": "专业咨询"}
+{"query": "JavaScript闭包的原理是什么？", "label": "通用知识"}
+{"query": "人工智能NLP方向课程更新到最新版本了吗？", "label": "专业咨询"}
+{"query": "什么是CAP定理？在分布式系统中如何应用？", "label": "通用知识"}
+{"query": "前端Vue3培训班杭州开课时间是什么时候？", "label": "专业咨询"}
+{"query": "MySQL事务隔离级别有哪些？", "label": "通用知识"}
+{"query": "物联网嵌入式培训有硬件实操环节吗？", "label": "专业咨询"}
+{"query": "什么是负载均衡？常见的算法有哪些？", "label": "通用知识"}
+{"query": "网络安全渗透测试培训班就业率怎么样？", "label": "专业咨询"}
+{"query": "Java中String为什么是不可变的？", "label": "通用知识"}
+{"query": "云计算AWS认证培训课程包含考试费吗？", "label": "专业咨询"}
+{"query": "什么是GraphQL？和REST有什么区别？", "label": "通用知识"}
+{"query": "UI/UX设计培训武汉校区还在招生吗？", "label": "专业咨询"}
+{"query": "Python异步编程asyncio怎么用？", "label": "通用知识"}
+{"query": "Java微服务Spring Cloud培训班师资来自哪里？", "label": "专业咨询"}
+{"query": "什么是OAuth2.0授权流程？", "label": "通用知识"}
+{"query": "数据分析师培训课程有真实企业数据集吗？", "label": "专业咨询"}
+{"query": "React Hooks中useEffect的依赖数组作用是什么？", "label": "通用知识"}
+{"query": "鸿蒙系统开发培训南京有合作院校吗？", "label": "专业咨询"}
+{"query": "什么是死锁？产生条件有哪些？", "label": "通用知识"}
+{"query": "自动化运维Ansible培训班学习时长几个月？", "label": "专业咨询"}
+{"query": "MongoDB和MySQL如何选择？", "label": "通用知识"}
+{"query": "AI计算机视觉课程学费含GPU算力费用吗？", "label": "专业咨询"}
+{"query": "什么是WebSocket协议？适用场景有哪些？", "label": "通用知识"}
+{"query": "前端小程序开发培训广州校区环境如何？", "label": "专业咨询"}
+{"query": "Java泛型擦除是什么意思？", "label": "通用知识"}
+{"query": "区块链智能合约培训班有实操钱包吗？", "label": "专业咨询"}
+{"query": "什么是DNS解析过程？", "label": "通用知识"}
+{"query": "测试开发工程师课程涵盖性能测试吗？", "label": "专业咨询"}
+{"query": "Python中GIL锁对多线程有什么影响？", "label": "通用知识"}
+{"query": "大数据Flink实时计算培训西安有开班吗？", "label": "专业咨询"}
+{"query": "什么是JWT令牌？由哪几部分组成？", "label": "通用知识"}
+{"query": "产品经理原型设计工具培训包含Axure吗？", "label": "专业咨询"}
+{"query": "CSS Grid布局和Flex布局怎么选？", "label": "通用知识"}
+{"query": "Java高并发编程培训班报名截止日期是哪天？", "label": "专业咨询"}
+{"query": "什么是CDN加速？工作原理是什么？", "label": "通用知识"}
+{"query": "网络安全等保测评培训课程对接考证吗？", "label": "专业咨询"}
+{"query": "TypeScript中interface和type的区别", "label": "通用知识"}
+{"query": "云计算容器编排培训重庆校区电话是多少？", "label": "专业咨询"}
+{"query": "什么是B+树？为什么数据库索引用它？", "label": "通用知识"}
+{"query": "全栈Node.js培训班上海有夜校班吗？", "label": "专业咨询"}
+{"query": "Linux中grep和awk怎么配合使用？", "label": "通用知识"}
+{"query": "AI机器学习课程是否提供论文指导服务？", "label": "专业咨询"}
+{"query": "什么是RPC框架？gRPC的特点是什么？", "label": "通用知识"}
+{"query": "嵌入式Linux驱动开发培训长沙有实训基地吗？", "label": "专业咨询"}
+{"query": "Java Stream API常用操作有哪些？", "label": "通用知识"}
+{"query": "数据分析Power BI培训班天津开课时间？", "label": "专业咨询"}
+{"query": "什么是SSL/TLS握手过程？", "label": "通用知识"}
+{"query": "游戏Unity3D开发培训郑州校区住宿费多少？", "label": "专业咨询"}
+{"query": "Python中字典的底层实现原理是什么？", "label": "通用知识"}
+{"query": "DevOps CI/CD流水线课程用Jenkins还是GitLab？", "label": "专业咨询"}
+{"query": "什么是事件驱动架构？有哪些应用场景？", "label": "通用知识"}
+{"query": "软件测试Selenium自动化培训班苏州有吗？", "label": "专业咨询"}
+{"query": "JavaScript原型链是怎么工作的？", "label": "通用知识"}
+{"query": "大数据Hadoop生态培训课程包含Spark吗？", "label": "专业咨询"}
+{"query": "什么是ACID特性？在数据库中如何保证？", "label": "通用知识"}
+{"query": "前端React Native跨平台培训合肥有合作企业吗？", "label": "专业咨询"}
+{"query": "Go语言goroutine调度模型GMP是什么？", "label": "通用知识"}
+{"query": "AI深度学习PyTorch培训班青岛校区规模多大？", "label": "专业咨询"}
+{"query": "什么是Nginx反向代理？配置示例怎么写？", "label": "通用知识"}
+{"query": "网络安全Web安全培训课程有CTF竞赛辅导吗？", "label": "专业咨询"}
+{"query": "Java Spring Boot自动装配原理是什么？", "label": "通用知识"}
+{"query": "云计算OpenStack培训济南有政府补贴吗？", "label": "专业咨询"}
+{"query": "什么是ORM框架？Hibernate和MyBatis区别", "label": "通用知识"}
+{"query": "UI设计Figma工具培训班宁波有线上直播吗？", "label": "专业咨询"}
+{"query": "Python爬虫requests库怎么处理反爬？", "label": "通用知识"}
+{"query": "Java企业级开发培训石家庄校区食堂怎么样？", "label": "专业咨询"}
+{"query": "什么是NoSQL数据库？有哪些类型？", "label": "通用知识"}
+{"query": "大数据Kafka消息中间件课程学时安排？", "label": "专业咨询"}
+{"query": "JavaScript Promise.all和Promise.race区别", "label": "通用知识"}
+{"query": "嵌入式RTOS实时系统培训福州有实验室吗？", "label": "专业咨询"}
+{"query": "什么是API网关？Spring Cloud Gateway怎么用？", "label": "通用知识"}
+{"query": "测试管理TestLink工具培训班厦门有认证吗？", "label": "专业咨询"}
+{"query": "Linux iptables防火墙规则怎么写？", "label": "通用知识"}
+{"query": "AI自然语言处理BERT模型课程难度如何？", "label": "专业咨询"}
+{"query": "什么是设计模式中的单例模式？线程安全吗？", "label": "通用知识"}
+{"query": "全栈PHP Laravel培训班南宁有就业协议吗？", "label": "专业咨询"}
+{"query": "MySQL主从复制延迟怎么排查？", "label": "通用知识"}
+{"query": "网络安全红蓝对抗培训贵阳有实战演练吗？", "label": "专业咨询"}
+{"query": "什么是Webpack模块打包？Loader和Plugin区别", "label": "通用知识"}
+{"query": "云计算Terraform基础设施即代码课程更新了吗？", "label": "专业咨询"}
+{"query": "Java内存模型JMM的happens-before规则", "label": "通用知识"}
+{"query": "数据分析Tableau可视化培训班兰州有周末班吗？", "label": "专业咨询"}
+{"query": "什么是SSH隧道？端口转发怎么配置？", "label": "通用知识"}
+{"query": "鸿蒙HarmonyOS应用开发培训海口有试点班吗？", "label": "专业咨询"}
+{"query": "Python多进程multiprocessing怎么共享内存？", "label": "通用知识"}
+{"query": "Java分布式事务Seata框架课程包含源码分析吗？", "label": "专业咨询"}
+{"query": "什么是Raft共识算法？和Paxos有什么区别？", "label": "通用知识"}
+{"query": "前端Three.js 3D开发培训太原有作品展示会吗？", "label": "专业咨询"}
+{"query": "Redis Cluster集群模式数据分片原理", "label": "通用知识"}
+{"query": "AI强化学习课程是否有机器人仿真环境？", "label": "专业咨询"}
+{"query": "什么是CORS跨域？服务端怎么配置？", "label": "通用知识"}
+{"query": "大数据ClickHouse OLAP培训班呼和浩特有吗？", "label": "专业咨询"}
+{"query": "JavaScript WeakMap和WeakSet的使用场景", "label": "通用知识"}
+{"query": "软件测试Appium移动端测试课程支持iOS吗？", "label": "专业咨询"}
+{"query": "什么是Service Mesh？Istio架构组成", "label": "通用知识"}
+{"query": "网络安全密码学基础培训银川有选修课吗？", "label": "专业咨询"}
+{"query": "Java反射机制的性能问题及优化方案", "label": "通用知识"}
+{"query": "云计算Serverless无服务器课程用AWS Lambda吗？", "label": "专业咨询"}
+{"query": "什么是ELK日志收集栈？Filebeat怎么配置？", "label": "通用知识"}
+{"query": "UI动效设计After Effects培训班西宁有小班制吗？", "label": "专业咨询"}
+{"query": "Python数据清洗pandas常用函数汇总", "label": "通用知识"}
+{"query": "Java性能调优JVM诊断工具课程包含Arthas吗？", "label": "专业咨询"}
+{"query": "什么是零拷贝技术？Netty如何实现？", "label": "通用知识"}
+{"query": "大数据DataX数据同步培训拉萨有远程班吗？", "label": "专业咨询"}
+{"query": "CSS预处理器Sass和Less语法差异", "label": "通用知识"}
+{"query": "AI语音识别ASR课程是否提供标注数据集？", "label": "专业咨询"}
+{"query": "什么是数据库连接池？Druid配置参数详解", "label": "通用知识"}
+{"query": "嵌入式CAN总线通信培训乌鲁木齐有设备吗？", "label": "专业咨询"}
+{"query": "JavaScript Event Loop宏任务微任务执行顺序", "label": "通用知识"}
+{"query": "测试左移Shift-Left理念培训班哈尔滨有讲座吗？", "label": "专业咨询"}
+{"query": "什么是gRPC Protobuf序列化？性能优势在哪？", "label": "通用知识"}
+{"query": "网络安全应急响应培训长春有模拟攻防吗？", "label": "专业咨询"}
+{"query": "Java注解处理器APT编译期处理原理", "label": "通用知识"}
+{"query": "云计算K8s Helm Chart部署课程有实验环境吗？", "label": "专业咨询"}
+{"query": "什么是布隆过滤器？误判率怎么计算？", "label": "通用知识"}
+{"query": "前端Electron桌面应用培训沈阳有项目答辩吗？", "label": "专业咨询"}
+{"query": "Python类型提示typing模块最佳实践", "label": "通用知识"}
+{"query": "大数据Flink CDC变更捕获课程更新到1.17了吗？", "label": "专业咨询"}
+{"query": "什么是限流熔断？Sentinel规则配置示例", "label": "通用知识"}
+{"query": "AI图像分割YOLOv8培训班大连有GPU机房吗？", "label": "专业咨询"}
+{"query": "MySQL Explain执行计划各字段含义", "label": "通用知识"}
+{"query": "网络安全漏洞挖掘Burp Suite课程有靶场吗？", "label": "专业咨询"}
+{"query": "什么是领域驱动设计DDD？聚合根怎么划分？", "label": "通用知识"}
+{"query": "全栈Rust系统编程培训无锡有开源项目吗？", "label": "专业咨询"}
+{"query": "JavaScript Proxy和Reflect元编程用法", "label": "通用知识"}
+{"query": "测试混沌工程Chaos Monkey培训班佛山有认证吗？", "label": "专业咨询"}
+{"query": "什么是Consul服务发现？健康检查机制", "label": "通用知识"}
+{"query": "云计算多云管理培训东莞有华为云资源吗？", "label": "专业咨询"}
+{"query": "Java CompletableFuture异步编排使用方法", "label": "通用知识"}
+{"query": "数据分析Excel高级函数培训班中山有企业定制吗？", "label": "专业咨询"}
+{"query": "什么是Zero Trust零信任架构？核心原则", "label": "通用知识"}
+{"query": "嵌入式FPGA Verilog培训珠海有芯片流片机会吗？", "label": "专业咨询"}
+{"query": "Python上下文管理器with语句实现原理", "label": "通用知识"}
+{"query": "AI推荐系统协同过滤课程有电商案例吗？", "label": "专业咨询"}
+{"query": "什么是GraphQL Subscription？实时推送实现", "label": "通用知识"}
+{"query": "网络安全数据安全法合规培训惠州有证书吗？", "label": "专业咨询"}
+{"query": "Java虚拟线程Virtual Thread JDK21新特性", "label": "通用知识"}
+{"query": "大数据Iceberg表格式培训江门有湖仓一体实践吗？", "label": "专业咨询"}
+{"query": "什么是eBPF内核观测技术？应用场景", "label": "通用知识"}
+{"query": "前端Svelte框架培训班汕头有对比React课程吗？", "label": "专业咨询"}
+{"query": "CSS Container Queries容器查询兼容性", "label": "通用知识"}
+{"query": "测试API Postman自动化课程湛江有企业真题吗？", "label": "专业咨询"}
+{"query": "什么是WASM WebAssembly？浏览器运行原理", "label": "通用知识"}
+{"query": "云计算FinOps成本优化培训茂名有ROI分析吗？", "label": "专业咨询"}
+{"query": "JavaScript Intl国际化API日期格式化", "label": "通用知识"}
+{"query": "AI边缘计算TensorRT部署班肇庆有Jetson设备吗？", "label": "专业咨询"}
+{"query": "什么是数据库Sharding分库分表策略？", "label": "通用知识"}
+{"query": "网络安全零日漏洞研究培训清远有保密协议吗？", "label": "专业咨询"}
+{"query": "Java Record类JDK16新特性使用限制", "label": "通用知识"}
+{"query": "大数据Presto SQL查询引擎课程韶关有调优实战吗？", "label": "专业咨询"}
+{"query": "什么是CRDT无冲突复制数据类型？", "label": "通用知识"}
+{"query": "嵌入式ROS2机器人操作系统培训梅州有仿真平台吗？", "label": "专业咨询"}
+{"query": "Python Pydantic数据验证V2版本变化", "label": "通用知识"}
+{"query": "AI多模态CLIP模型培训班河源有论文复现吗？", "label": "专业咨询"}
+{"query": "什么是QUIC协议？相比TCP优势在哪？", "label": "通用知识"}
+{"query": "测试安全测试OWASP Top10课程阳江有实操吗？", "label": "专业咨询"}
+{"query": "JavaScript Atomics原子操作SharedArrayBuffer", "label": "通用知识"}
+{"query": "云计算Service Level Objective SLO定义培训云浮有案例吗？", "label": "专业咨询"}
+{"query": "什么是LSM-Tree存储引擎？RocksDB原理", "label": "通用知识"}
+{"query": "前端Astro静态站点生成器班潮州有SEO优化课吗？", "label": "专业咨询"}
+{"query": "CSS Houdini自定义绘制Paint API用法", "label": "通用知识"}
+{"query": "大数据Doris MPP数据库培训揭阳有压测环境吗？", "label": "专业咨询"}
+{"query": "什么是Formal Verification形式化验证？", "label": "通用知识"}
+{"query": "网络安全威胁建模STRIDE方法班汕尾有工作坊吗？", "label": "专业咨询"}
