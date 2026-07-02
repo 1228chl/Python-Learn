@@ -10,3 +10,4 @@ rage_qa/__pycache__
 .DS_Store
 rage_qa/models/
 *.csv
+/docker/milvus_redis/volumes/
