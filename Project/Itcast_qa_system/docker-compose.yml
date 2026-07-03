@@ -11,7 +11,7 @@ services:
       - "8003:8003"
     volumes:
       - ./docker_logs:/app/logs
-      - ./rag_qa/models:/Users/chan/projects/Itcast_qa_system/rag_qa/models
+      - ./rag_qa/models:/Project/Itcast_qa_system/rag_qa/models
 #      - ./rag_qa/data:/app/rag_qa/data
 #      - ./mysql_qa/data:/app/mysql_qa/data
     environment:
