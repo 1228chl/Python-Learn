@@ -24,7 +24,7 @@ def setup_logger(name, log_file='logs/app.log'):
     console_handler.setLevel(logging.INFO)
 
     # 创建文件处理器
-    file_handler = logging.FileHandler(log_file, mode='a')
+    file_handler = logging.FileHandler(log_file, mode='a', encoding="utf-8")
     file_handler.setLevel(logging.DEBUG)
 
     # 定义日志格式

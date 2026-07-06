@@ -17,7 +17,7 @@ console_handler = logging.StreamHandler()
 console_handler.setLevel(logging.INFO)  # 控制台显示INFO及以上级别
 
 # 创建文件处理器
-file_handler = logging.FileHandler('log/app.log', mode='a')
+file_handler = logging.FileHandler('log/app.log', mode='a',encoding="utf-8")
 file_handler.setLevel(logging.DEBUG)  # 文件记录DEBUG及以上级别
 
 # 定义日志格式

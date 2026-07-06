@@ -8,7 +8,9 @@
 """
 import redis
 import json
-from base import Config, logger
+from Project.Itcast_qa_system.base.config import Config
+from Project.Itcast_qa_system.base.logger import logger
+
 
 
 class RedisClient:
