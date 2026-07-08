@@ -18,3 +18,4 @@ rage_qa/models/
 /rag_qa/models/bge-m3/tokenizer.json
 /rag_qa/models/bge-m3/onnx/tokenizer.json
 /rag_qa/models/bge-reranker-v2-m3/tokenizer.json
+/docker/mysql/mysql_data/
