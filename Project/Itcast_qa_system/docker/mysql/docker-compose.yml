@@ -10,7 +10,7 @@ services:
       MYSQL_USER: vincent
       MYSQL_PASSWORD: 123456
     ports:
-      - "3306:3306"
+      - "3307:3306"
     command: --local-infile=1
     volumes:
       - ./init:/docker-entrypoint-initdb.d

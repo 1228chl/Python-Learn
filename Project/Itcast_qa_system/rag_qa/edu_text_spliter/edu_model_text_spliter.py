@@ -5,7 +5,7 @@ from langchain_text_splitters import CharacterTextSplitter
 import re
 from typing import List
 from modelscope.pipelines import pipeline
-from base.config import Config
+from Project.Itcast_qa_system.base.config import Config
 
 conf = Config()
 

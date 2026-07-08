@@ -17,9 +17,9 @@ from datetime import datetime
 # project_root = os.path.dirname(rag_qa_path)
 # sys.path.insert(0, project_root)
 # ========================================
-from rag_qa.edu_document_loaders import OCRPDFLoader, OCRDOCLoader, OCRPPTLoader, OCRIMGLoader
-from rag_qa.edu_text_spliter import ChineseRecursiveTextSplitter
-from base import logger, Config
+from Project.Itcast_qa_system.rag_qa.edu_document_loaders import OCRPDFLoader, OCRDOCLoader, OCRPPTLoader, OCRIMGLoader
+from Project.Itcast_qa_system.rag_qa.edu_text_spliter import ChineseRecursiveTextSplitter
+from Project.Itcast_qa_system.base import logger, Config
 
 conf = Config()
 # 定义支持的文件类型及其对应的加载器字典

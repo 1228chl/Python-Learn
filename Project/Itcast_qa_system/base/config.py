@@ -3,14 +3,13 @@ import configparser
 # 导入路径操作库
 import os
 
-
 class Config:
     # 初始化配置，加载 config.ini 文件
-    def __init__(self, config_file="Project/Itcast_qa_system/config.ini"):
+    def __init__(self, config_file=r"G:\code\python\Python-Learn\Project\Itcast_qa_system\config.ini"):
         # 创建配置解析器
         self.config = configparser.ConfigParser()
         # 读取配置文件
-        self.config.read(config_file)  # windows包gbk错误，增加encoding=utf-8
+        self.config.read(config_file,encoding='utf-8')  # windows包gbk错误，增加encoding=utf-8
 
         # MySQL 配置
         # MySQL 主机地址
@@ -77,10 +76,12 @@ class Config:
         # model path
         # self.bge_m3 = "/Users/chan/projects/Itcast_qa_system/rag_qa/models/bge-m3"
         # self.bge_reranker = "/Users/chan/projects/Itcast_qa_system/rag_qa/models/bge-reranker-large"
-        self.nlp_bert_doc_seg = "Project/Itcast_qa_system/rag_qa/models/nlp_bert_document-segmentation_chinese-base"
-        self.bert_intent_cls = "Project/Itcast_qa_system/rag_qa/core/bert_query_classifier"
+        self.nlp_bert_doc_seg = r"G:\code\python\Python-Learn\Project\Itcast_qa_system\rag_qa\models\nlp_bert_document-segmentation_chinese-base"
+        self.bert_intent_cls = r"G:\code\python\Python-Learn\Project\Itcast_qa_system\rag_qa\core\bert_query_classifier"
 
 
 if __name__ == '__main__':
     conf = Config()
     print(conf.LOG_FILE)
+    print(conf.nlp_bert_doc_seg)
+    print(conf.bert_intent_cls)

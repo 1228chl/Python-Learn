@@ -53,11 +53,21 @@ services:
     image: redis:7.2
     restart: always
     ports:
-      - "6379:6379"
+      - "6380:6379"
     volumes:
       - ./volumes/redis:/data
     # 设置 Redis 密码为 1234
     command: redis-server --requirepass 1234
+
+  attu:
+      container_name: milvus-attu
+      image: zilliz/attu:latest
+      ports:
+        - "30000:3000"
+      environment:
+        - MILVUS_URL=standalone:19530
+      depends_on:
+        - standalone
 
 networks:
   default:

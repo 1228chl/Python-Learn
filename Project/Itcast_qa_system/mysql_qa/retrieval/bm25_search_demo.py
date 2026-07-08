@@ -9,7 +9,7 @@
 import jieba
 from rank_bm25 import BM25L
 from typing import List
-from base import logger
+from Project.Itcast_qa_system.base import logger
 
 
 class BM25SearchDemo:

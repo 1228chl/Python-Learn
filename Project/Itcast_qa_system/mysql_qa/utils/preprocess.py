@@ -1,7 +1,7 @@
 # 导入分词库
 import jieba
 # 导入日志
-from base import logger
+from Project.Itcast_qa_system.base import logger
 from typing import List
 
 

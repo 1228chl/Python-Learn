@@ -3,7 +3,7 @@ from mysql_qa import MySQLClient, RedisClient, BM25Search
 # 导入 RAG 系统组件
 from rag_qa import VectorStore, RAGSystem
 # 导入配置和日志
-from base import logger, Config
+from Project.Itcast_qa_system.base import logger, config
 # 导入 OpenAI
 from openai import OpenAI
 # 导入时间库
@@ -15,7 +15,7 @@ class IntegratedQASystem:
         # 初始化日志
         self.logger = logger
         # 初始化配置
-        self.config = Config()
+        self.config = config.Config()
         # 初始化 MySQL 客户端
         self.mysql_client = MySQLClient()
         # 初始化 Redis 客户端

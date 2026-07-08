@@ -1,5 +1,5 @@
 import os
-from base import Config, logger
+from Project.Itcast_qa_system.base import Config, logger
 from core.document_loader import process_documents  # 导入处理文档的函数
 from core.vector_store import VectorStore
 from core.rag_system import RAGSystem

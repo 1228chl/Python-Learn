@@ -3,9 +3,9 @@ from rank_bm25 import BM25Okapi
 # 导入数值计算库
 import numpy as np
 # 导入文本预处理
-from mysql_qa.utils.preprocess import preprocess_text
+from Project.Itcast_qa_system.mysql_qa.utils.preprocess import preprocess_text
 # 导入日志
-from base import logger
+from Project.Itcast_qa_system.base import logger
 
 
 class BM25Search:

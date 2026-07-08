@@ -17,7 +17,7 @@ print(f'project_root--》{project_root}')
 sys.path.insert(0, project_root)
 
 # 导入配置和日志
-from base import Config, logger
+from Project.Itcast_qa_system.base import Config, logger
 
 
 class MySQLClient:
@@ -31,7 +31,7 @@ class MySQLClient:
                 user=Config().MYSQL_USER,
                 password=Config().MYSQL_PASSWORD,
                 database=Config().MYSQL_DATABASE,
-                # port=3307
+                port=3307
             )
             # 创建游标
             self.cursor = self.connection.cursor()

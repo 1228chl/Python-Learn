@@ -119,6 +119,16 @@ services:
       timeout: 10s
       retries: 5
       start_period: 60s
+
+  attu:
+    container_name: milvus-attu
+    image: zilliz/attu:latest
+    ports:
+      - "30000:3000"
+    environment:
+      - MILVUS_URL=milvus:19530
+    depends_on:
+      - milvus
 networks:
   itcast_network:
     external: true

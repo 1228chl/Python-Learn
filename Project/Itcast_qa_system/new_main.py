@@ -3,7 +3,7 @@ from mysql_qa import MySQLClient, RedisClient, BM25Search
 # 导入RAG系统组件
 from rag_qa import VectorStore, RAGSystem
 # 导入配置和日志
-from base import logger, Config
+from Project.Itcast_qa_system.base import logger, Config
 # 导入OpenAI客户端，用于DashScope API
 from openai import OpenAI
 # 导入时间库，记录处理时间

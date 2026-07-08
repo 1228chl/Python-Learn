@@ -4,9 +4,9 @@ from langchain_community.document_loaders import TextLoader
 from langchain_community.document_loaders.markdown import UnstructuredMarkdownLoader
 from langchain_text_splitters import MarkdownTextSplitter
 from datetime import datetime
-from rag_qa.edu_text_spliter import AliTextSplitter, ChineseRecursiveTextSplitter
-from rag_qa.edu_document_loaders import OCRPDFLoader, OCRDOCLoader, OCRPPTLoader, OCRIMGLoader
-from base import logger, Config
+from Project.Itcast_qa_system.rag_qa.edu_text_spliter import AliTextSplitter, ChineseRecursiveTextSplitter
+from Project.Itcast_qa_system.rag_qa.edu_document_loaders import OCRPDFLoader, OCRDOCLoader, OCRPPTLoader, OCRIMGLoader
+from Project.Itcast_qa_system.base import logger, Config
 
 conf = Config()
 # 定义支持的文件类型及其对应的加载器字典

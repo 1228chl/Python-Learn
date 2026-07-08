@@ -1,9 +1,9 @@
-from rag_qa.core.prompts import RAGPrompts
+from Project.Itcast_qa_system.rag_qa.core.prompts import RAGPrompts
 #   导入 time 模块，用于计算时间
 import time
-from base import logger, Config
-from rag_qa.core.query_classifier import QueryClassifier  # 导入查询分类器
-from rag_qa.core.strategy_selector import StrategySelector  # 导入策略选择器
+from Project.Itcast_qa_system.base import logger, Config
+from Project.Itcast_qa_system.rag_qa.core.query_classifier import QueryClassifier  # 导入查询分类器
+from Project.Itcast_qa_system.rag_qa.core.strategy_selector import StrategySelector  # 导入策略选择器
 
 conf = Config()
 
