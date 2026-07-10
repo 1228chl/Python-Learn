@@ -25,7 +25,7 @@ project_root = os.path.dirname(rag_qa_path)
 sys.path.insert(0, project_root)
 
 # from base import logger, Config
-from rag_qa.core.document_processor import *
+from Project.Itcast_qa_system.rag_qa.core.document_processor import *
 
 conf = Config()
 
@@ -326,12 +326,12 @@ class VectorStore:
 
 if __name__ == "__main__":
     vector_store = VectorStore()  # 建表
-    # directory_path = '/Users/chan/projects/Itcast_qa_system/rag_qa/data/ai_data'
-    # print(f"embedding_function.dim--》{vector_store.embedding_function.dim}")
-    # documents = process_documents(directory_path)  # 文档读取与切块
-    # vector_store.add_documents(documents)  # 子块编码并且写入Milvus
+    directory_path = r'G:\code\python\Python-Learn\Project\Itcast_qa_system\rag_qa\data\ai_data'
+    print(f"embedding_function.dim--》{vector_store.embedding_function.dim}")
+    documents = process_documents(directory_path)  # 文档读取与切块
+    vector_store.add_documents(documents)  # 子块编码并且写入Milvus
 
-    query = "AI学科学费是多少？"
-    results = vector_store.hybrid_search_with_rerank(query, source_filter='ai')
-    print(f'results-->{results}')
-    print(f'results-->{len(results)}')
+    # query = "AI学科学费是多少？"
+    # results = vector_store.hybrid_search_with_rerank(query, source_filter='ai')
+    # print(f'results-->{results}')
+    # print(f'results-->{len(results)}')

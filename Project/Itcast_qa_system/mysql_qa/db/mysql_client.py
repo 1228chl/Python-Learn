@@ -64,7 +64,7 @@ class MySQLClient:
                              (
                                  1000
                              )
-                                 ) \
+                                 )
                              '''
         try:
             self.cursor.execute(create_table_query)
