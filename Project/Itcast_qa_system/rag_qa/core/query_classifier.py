@@ -4,7 +4,7 @@ import os
 # 导入 PyTorch
 import torch
 # 导入日志
-from base import logger
+from Project.Itcast_qa_system.base import logger
 # 导入numpy
 import numpy as np
 # 导入 Transformers 库
@@ -211,7 +211,7 @@ class QueryClassifier:
 
 if __name__ == "__main__":
     # 初始化分类器
-    classifier = QueryClassifier(model_path="/Users/chan/projects/models/bert-base-chinese")  # 可以修改自己的bert模型路径
+    classifier = QueryClassifier(model_path=r"G:\code\python\Python-Learn\Project\NLP-DangDangBookClassifier\model\bert\base\bert-base-chinese")  # 可以修改自己的bert模型路径
 
     # 训练模型
     classifier.train_model(data_file='../classify_data/chatgpt_generate_200.jsonl')  # 可以修改自己的训练数据路径

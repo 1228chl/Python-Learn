@@ -50,8 +50,8 @@ dataset = Dataset.from_dict(eval_data)
 # 初始化OpenAI嵌入模型，用于计算语义相似度，设置API密钥
 # embeddings = OpenAIEmbeddings(openai_api_key=os.environ['OPENAI_API_KEY'])
 
-llm = ChatTongyi(model="qwen3-max", api_key=os.getenv("API_KEY"))
-embeddings = DashScopeEmbeddings(dashscope_api_key=os.getenv("API_KEY"), model="text-embedding-v4")
+llm = ChatTongyi(model="qwen3-max", api_key=os.getenv("TONGYI_API_KEY"))
+embeddings = DashScopeEmbeddings(dashscope_api_key=os.getenv("TONGYI_API_KEY"), model="text-embedding-v4")
 # 4. 执行评估
 # 调用evaluate函数，传入数据集、评估指标、LLM模型和嵌入模型
 result = evaluate(
